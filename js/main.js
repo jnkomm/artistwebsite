@@ -7,17 +7,17 @@
 
 // Social / streaming profiles. Any link left empty is hidden automatically.
 const LINKS = {
-  spotify:    "https://open.spotify.com/artist/REPLACE_WITH_SPOTIFY_ARTIST_ID",
-  instagram:  "https://www.instagram.com/genghiskomm",
+  spotify:    "https://open.spotify.com/artist/5tfyuSehtYBbtPq1VDS9JX",
+  instagram:  "https://www.instagram.com/genghiskomm_",
   tiktok:     "https://www.tiktok.com/@genghiskomm",
   youtube:    "https://www.youtube.com/@genghiskomm",
   facebook:   "https://www.facebook.com/genghiskomm",
-  soundcloud: "https://soundcloud.com/genghiskomm",
-  apple:      "https://music.apple.com/",            // Apple Music artist page
-  beatport:   "https://www.beatport.com/",           // Beatport artist page
-  bandsintown:"https://www.bandsintown.com/",        // Bandsintown artist page
-  x:          "",                                    // e.g. https://x.com/genghiskomm
-  merch:      "",                                    // store URL — button falls back to #bookings
+  soundcloud: "https://soundcloud.com/user-377366087-64355124",
+  apple:      "https://music.apple.com/us/artist/genghis-komm/1808337180",            // Apple Music artist page
+  beatport:   "Unavailable",           // Beatport artist page
+  bandsintown:"Unavailable",        // Bandsintown artist page
+  x:          "Unavailable",                                    // e.g. https://x.com/genghiskomm
+  merch:      "Unavailable",                                    // store URL — button falls back to #bookings
 };
 
 // Order + styling of the social icon rows (hero, bookings, footer).
@@ -36,9 +36,7 @@ const SOCIAL_ORDER = [
 // Contact addresses.
 const EMAILS = {
   bookings:   "bookings@genghiskomm.com",
-  management: "management@genghiskomm.com",
-  press:      "press@genghiskomm.com",
-  newsletter: "news@genghiskomm.com",
+  newsletter: "josh@genghiskomm.com",
 };
 
 // Optional form backends (e.g. https://formspree.io/f/xxxxxx). When empty,
@@ -48,7 +46,7 @@ const NEWSLETTER_ENDPOINT = "";
 
 // Spotify player on the "Latest Release" block, e.g. "artist/4Z8W4fKeB5YxbusRsdQVPb"
 // or "track/…" / "album/…". Leave empty to hide the embed.
-const SPOTIFY_EMBED = "";
+const SPOTIFY_EMBED = "<iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/1muxEpkrSqaNYTV4eHQcV3?utm_source=generator&si=4b517ab412c4441a" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>";
 
 // Discography. `cover` is optional — without it a styled tile is generated.
 const RELEASES = [
@@ -61,21 +59,20 @@ const RELEASES = [
 
 // Upcoming shows — EXAMPLE DATA, replace with real dates (or empty the array
 // to show the "no dates announced" message). Dates are YYYY-MM-DD.
-const SHOWS = [
-  { date: "2026-10-17", event: "Raw Assault",          venue: "Warehouse 9",        city: "Chicago, IL",     tickets: "#", note: "Headline" },
-  { date: "2026-11-07", event: "Hard Dance Nation",    venue: "The Foundry",        city: "Los Angeles, CA", tickets: "#" },
-  { date: "2026-11-28", event: "Kick Cathedral",       venue: "Terminal 5",         city: "New York, NY",    tickets: "#", soldOut: true },
-  { date: "2026-12-31", event: "NYE: The Horde Rises", venue: "TBA",                city: "Denver, CO",      tickets: "#", note: "Extended set" },
-];
+const SHOWS = [];
+//  { date: "2026-10-17", event: "Raw Assault",          venue: "Warehouse 9",        city: "Chicago, IL",     tickets: "#", note: "Headline" },
+//  { date: "2026-11-07", event: "Hard Dance Nation",    venue: "The Foundry",        city: "Los Angeles, CA", tickets: "#" },
+//  { date: "2026-11-28", event: "Kick Cathedral",       venue: "Terminal 5",         city: "New York, NY",    tickets: "#", soldOut: true },
+//  { date: "2026-12-31", event: "NYE: The Horde Rises", venue: "TBA",                city: "Denver, CO",      tickets: "#", note: "Extended set" },
+
 
 // Videos. `id` is the YouTube video ID (youtube.com/watch?v=ID). Leave id
 // empty to show a placeholder tile that links to the channel.
 const VIDEOS = [
-  { id: "", title: "Live @ Raw Assault — Full Set", sub: "60 min · Rawstyle" },
-  { id: "", title: "Khan of the Kick (Official Visualizer)", sub: "Official video" },
-  { id: "", title: "Studio Session: Building the Kick", sub: "Production breakdown" },
 ];
-
+  { id: "", title: "Live @ Raw Assault — Full Set", sub: "60 min · Rawstyle" },
+//  { id: "", title: "Khan of the Kick (Official Visualizer)", sub: "Official video" },
+//  { id: "", title: "Studio Session: Building the Kick", sub: "Production breakdown" },
 // ------------------------------------------------------------ END CONFIG --
 
 const $ = (s, el = document) => el.querySelector(s);
@@ -108,7 +105,7 @@ $$(".socials").forEach((ul) => {
 if (SPOTIFY_EMBED) {
   const box = $(".embed--spotify");
   box.hidden = false;
-  box.innerHTML = `<iframe src="https://open.spotify.com/embed/${esc(SPOTIFY_EMBED)}?utm_source=generator&theme=0" height="352" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" title="Genghis Komm on Spotify"></iframe>`;
+  box.innerHTML = `<iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/artist/5tfyuSehtYBbtPq1VDS9JX?utm_source=generator&si=b95c1a9308284f4a" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>`;
 }
 
 // ---- discography ----
