@@ -46,8 +46,7 @@ const NEWSLETTER_ENDPOINT = "";
 
 // Spotify player on the "Latest Release" block, e.g. "artist/4Z8W4fKeB5YxbusRsdQVPb"
 // or "track/…" / "album/…". Leave empty to hide the embed.
-const SPOTIFY_EMBED = "<iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/1muxEpkrSqaNYTV4eHQcV3?utm_source=generator&si=4b517ab412c4441a" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>";
-
+const SPOTIFY_EMBED = "https://open.spotify.com/embed/track/1muxEpkrSqaNYTV4eHQcV3";
 // Discography. `cover` is optional — without it a styled tile is generated.
 const RELEASES = [
   { title: "Pay It Forward",   type: "Single", year: 2026, url: LINKS.spotify, colors: ["#7a130c", "#d8321f"], cover: "assets/payitforwardart.jpg" },
@@ -106,7 +105,17 @@ $$(".socials").forEach((ul) => {
 if (SPOTIFY_EMBED) {
   const box = $(".embed--spotify");
   box.hidden = false;
-  box.innerHTML = `<iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/artist/5tfyuSehtYBbtPq1VDS9JX?utm_source=generator&si=b95c1a9308284f4a" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>`;
+  box.innerHTML = `
+    <iframe
+      style="border-radius:12px"
+      src="${SPOTIFY_EMBED}"
+      width="100%"
+      height="352"
+      frameborder="0"
+      allowfullscreen
+      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+      loading="lazy">
+    </iframe>`;
 }
 
 // ---- discography ----
