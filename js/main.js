@@ -50,11 +50,11 @@ const SPOTIFY_EMBED = "<iframe data-testid="embed-iframe" style="border-radius:1
 
 // Discography. `cover` is optional — without it a styled tile is generated.
 const RELEASES = [
-  { title: "Khan of the Kick",   type: "Single", year: 2026, url: LINKS.spotify, colors: ["#7a130c", "#d8321f"] },
-  { title: "Steppe Fury",        type: "Single", year: 2026, url: LINKS.spotify, colors: ["#0d2e52", "#3fb4ff"] },
-  { title: "Iron Horde EP",      type: "EP",     year: 2025, url: LINKS.spotify, colors: ["#1b1f2a", "#8d97aa"] },
-  { title: "Circuit Warlord",    type: "Single", year: 2025, url: LINKS.spotify, colors: ["#08263f", "#e2683a"] },
-  { title: "Scorched Earth (Raw Edit)", type: "Edit", year: 2025, url: LINKS.soundcloud, colors: ["#3a0906", "#1d5fa8"] },
+  { title: "Pay It Forward",   type: "Single", year: 2026, url: LINKS.spotify, colors: ["#7a130c", "#d8321f"], cover: "assets/payitforwardart.jpg" },
+  { title: "WHAT THA HELLY (Genghis Komm Edit)",       type: "Edit", year: 2026, url: LINKS.soundcloud, colors: ["#0d2e52", "#3fb4ff"] },
+  { title: "Alabama 10 (Hardstyle/Rawstyle Remix)",      type: "Edit",     year: 2025, url: LINKS.soundcloud, colors: ["#1b1f2a", "#8d97aa"] },
+  { title: "Gnarly (Rawstlye/Hard Techno Remix)",    type: "Edit", year: 2025, url: LINKS.soundcloud, colors: ["#08263f", "#e2683a"] },
+//  { title: "Scorched Earth (Raw Edit)", type: "Edit", year: 2025, url: LINKS.soundcloud, colors: ["#3a0906", "#1d5fa8"] },
 ];
 
 // Upcoming shows — EXAMPLE DATA, replace with real dates (or empty the array
@@ -68,9 +68,8 @@ const SHOWS = [];
 
 // Videos. `id` is the YouTube video ID (youtube.com/watch?v=ID). Leave id
 // empty to show a placeholder tile that links to the channel.
-const VIDEOS = [
-];
-  { id: "", title: "Live @ Raw Assault — Full Set", sub: "60 min · Rawstyle" },
+const VIDEOS = [];
+//  { id: "", title: "Live @ Raw Assault — Full Set", sub: "60 min · Rawstyle" },
 //  { id: "", title: "Khan of the Kick (Official Visualizer)", sub: "Official video" },
 //  { id: "", title: "Studio Session: Building the Kick", sub: "Production breakdown" },
 // ------------------------------------------------------------ END CONFIG --
