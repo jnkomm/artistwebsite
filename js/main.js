@@ -51,9 +51,11 @@ const SPOTIFY_EMBED = "<iframe data-testid="embed-iframe" style="border-radius:1
 // Discography. `cover` is optional — without it a styled tile is generated.
 const RELEASES = [
   { title: "Pay It Forward",   type: "Single", year: 2026, url: LINKS.spotify, colors: ["#7a130c", "#d8321f"], cover: "assets/payitforwardart.jpg" },
-  { title: "WHAT THA HELLY (Genghis Komm Edit)",       type: "Edit", year: 2026, url: LINKS.soundcloud, colors: ["#0d2e52", "#3fb4ff"] },
-  { title: "Alabama 10 (Hardstyle/Rawstyle Remix)",      type: "Edit",     year: 2025, url: LINKS.soundcloud, colors: ["#1b1f2a", "#8d97aa"] },
-  { title: "Gnarly (Rawstlye/Hard Techno Remix)",    type: "Edit", year: 2025, url: LINKS.soundcloud, colors: ["#08263f", "#e2683a"] },
+  { title: "WHAT THA HELLY (Genghis Komm Edit)",       type: "Edit", year: 2026, url: LINKS.soundcloud, colors: ["#0d2e52", "#3fb4ff"], cover: "assets/whatthahellyart.jpg" },
+  { title: "Alabama 10 (Hardstyle/Rawstyle Remix)",      type: "Edit",     year: 2025, url: LINKS.soundcloud, colors: ["#1b1f2a", "#8d97aa"], cover: "assets/alabama10art.jpg},
+  { title: "Gnarly (Rawstlye/Hard Techno Remix)",    type: "Edit", year: 2025, url: LINKS.soundcloud, colors: ["#08263f", "#e2683a"], cover: "assets/gnarlyart.jpg" },
+  { title: "Pink Pony (Uptempo Flip)",   type: "Edit", year: 2025, url: LINKS.soundcloud, colors: ["#7a130c", "#d8321f"], cover: "assets/pinkponyart.jpg" },
+  { title: "Von Dutch (Genghis Komm Edit)",       type: "Edit", year: 2026, url: LINKS.soundcloud, colors: ["#0d2e52", "#3fb4ff"], cover: "assets/vondutchartart.jpg" }
 //  { title: "Scorched Earth (Raw Edit)", type: "Edit", year: 2025, url: LINKS.soundcloud, colors: ["#3a0906", "#1d5fa8"] },
 ];
 
